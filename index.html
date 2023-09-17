@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="module" src="three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+     <!-- Favicon -->
+     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+     <link rel="manifest" href="./favicon/site.webmanifest">
+
+
+
+    </head>
+
+    <body>
+        <header>
+            <div id="header-section">
+             <!--    <nav>
+                    <ul>
+                        <li><a href="index.html"><img src="../img/_house.png" width="55" height="45" ></a></li>
+                    </ul>
+                </nav> -->
+                <img src="./img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="./audio/main.mp3" autoplay loop ></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.1;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="./img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="./img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+         <!--   <h1>
+                <div class="image-container"><img id="1" src="./img/hearts1.png" width="250" 
+                    onmouseover="this.src='img/hearts2.png';" width="250"
+                    onmouseout="this.src='img/hearts1.png';"width="250"/></div>
+                      <img src="./img/hearts1.png" id="name" width = 250px > 
+            </h1>-->
+        </header>
+
+        <div class="image-container"><img id="1" src="./img/hearts1.png" width="150" 
+            onmouseover="this.src='img/hearts2.png';" width="150"
+            onmouseout="this.src='img/hearts1.png';"width="150"/></div>
+             <!-- <img src="./img/hearts1.png" id="name" width = 250px > -->
+        
+        <div class="scene"></div>
+
+
+        
+</body>
+
+</html>
+

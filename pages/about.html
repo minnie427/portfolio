@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../favicon/site.webmanifest">
+
+        <style>
+            body {
+                background-color: var(--col-05);
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(249, 225, 249));
+                background-image: cover;
+                
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <div id="header-section">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33" ></a></li>
+                    </ul>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="../audio/main.mp3" autoplay loop ></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.1;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="../img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="../img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+            <h1> <img src="../img/minnie7.png" id="name" width = 400px >  </h1>
+        </header>
+       
+<br>
+<div class="contentBox2">
+    <img src="../img/me.jpg" width="100%"><br><br>
+        <h5>
+            Hello, I am Jimin Park
+            <br>
+            or Minnie.<br>
+            <br>
+            A passionate designer 
+            <br>
+            and musician.
+        </h55>
+ <br><br>
+        <p class="about_text">
+         Born in South Korea,
+         <br>
+         studied in Boston and Tokyo
+         <br>
+         currently based in Melbourne, Australia
+         <br><br>
+         Bachelor of Design/Digital media, RMIT
+         <br>
+         07. 2021 ~
+ 
+         <!--
+         <div id="typing">I am a <span>WEB DESIGNER</span></div>
+         <div id="crow"></div>-->
+        </p>
+ 
+ 
+         <br><br><br><br>
+        <p class="line-1 anim-typewriter">I am a PAINTER</p>
+ 
+        <p class="about_text1">
+         I love oil paintings and oil pastels.
+         <br>
+         And I do many self-portraits too.
+         <br></p>
+         <br><br><br><br>
+         
+         <p class="line-2 anim-typewriter">I am a MUSICIAN</p>
+         <p class="about_text1">
+             I sing and dance.
+             <br>
+             And yes.
+             <br>
+             Music is my life.
+             <br></p>
+             <br><br><br><br>
+ 
+             <p class="line-3 anim-typewriter">I am a MAKER</p>
+         <p class="about_text1">
+             That's candles, not the flowers.
+             <br>
+              How do I make myself happy?
+             <br>
+             I knit, make leather goods, soaps, and do ceramic arts.
+             <br></p>
+             <br><br><br><br>
+ 
+             <p class="line-4 anim-typewriter">I am an EXPLORER</p>
+         <p class="about_text1">
+             I am cretive,
+             <br>
+             not afraid to challenge myself
+             <br>
+             and ready to explore!
+             <br></p>
+             <br><br><br><br>
+ 
+             <p class="line-5 anim-typewriter">Let's TALK</p>
+             <p class="about_text1">
+                minniepark.studio@gmail.com</p>
+                </div><br>
+
+                <div class="bottomPage">
+                    <ul><li><a href="#top"><img src="../img/arrow.png" width="40" height="40" ></a></li></ul>
+                    <ul><li><a href="../index.html"><img src="../img/house.png" width="50" height="40" ></a></li></ul>
+                    <ul><li><a href="contact.html"><img src="../img/contact2.png" width="45" height="43" ></a></li></ul>
+                </div><br>
+
+</body>
+
+</html>
+

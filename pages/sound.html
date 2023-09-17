@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../favicon/site.webmanifest">
+
+
+        <style>
+            body {
+                background-color: rgb(205, 149, 189);
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(113, 124, 156));
+                background-image: cover;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <header>
+            <div id="header-section">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33" ></a></li>
+                    </ul>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="../audio/sound.mp3" autoplay loop ></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.2;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="../img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="../img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+        </header>
+
+   <!--  <h1 id="top"><img src="../img/sound.png" id="name" width = 650px ></h1>
+        <br><br><br>
+    <div class ="text-wrapper">
+        <h2>WANNA PLAY THE GAME PREVIEW BELOW?</h2>
+        <h2>WANNA PLAY THE GAME PREVIEW BELOW?</h2>
+        <h2>WANNA PLAY THE GAME PREVIEW BELOW?</h2>
+        <h2>WANNA PLAY THE GAME PREVIEW BELOW?</h2>
+    </div> <br>
+
+        <div id="embed">
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/yWkpfznWtDI" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <ul><li><a href="https://minniepark.itch.io/forest-of-sound?secret=Bhu7KLCyORSzQkqOcKfIDL7pg" target="_blank"><h4>DOWNLOAD LINK</h4></a></li></ul>
+
+        <br><br><br><br><br><br><br>
+
+<div class="contentBox" >
+    <h3>WHAT IS IT?</h3>
+    <br><img src="../img/soundcube.jpg" width="100%"><br><br>
+    <p >
+    It's a minimalist game where the player flies in the forest of glass cubes which generate sound when touched.
+    </p><br>
+    <p2> The Narrative of the game</p2>
+    <p>
+    is about a magical room somewhere in the universe which is filled with giant glass chimes and the wind.  Occasionally wind blows through the chimes and when it does, the sound is generated and it becomes the music.
+    </p><br>
+            
+    <p2>FOREST OF SOUND</p2>
+    <p>
+    is therefore, a game in which a player flys and listens to the sound that is generated when the player touches the chimes.
+    </p><br><br></div>
+
+<div class="contentBox" >
+    <h3>DESIGN APPROACH</h3>
+    <br><img src="../img/soundSketch.jpg" width="100%">
+    <br><img src="../img/soundSketch2.jpg" width="100%"><br><br>
+
+  <p2>Concept Design: Ma</p2>
+    <p>
+    This game is created based on the theory of "Ma," exploring the deliberate emptiness and silence which pay attention to not only what exists visually and auditory in the game but also what does not in the scene.
+    </p><br>
+    <p>
+    The sound is only generated when the player intentionally plays it. There is silence before or in between the generated sound.  When Ma is about the pauses in between the sound, the player is the one who creates the Ma in the game. The game offers players not only to explore the game created by adapting Ma, but also to be part of creating Ma with the game. The other main foundation of the game is designed on emptiness. As Ma highlights the blankness and void. 
+    </p><br>
+    <p>
+    There is only one interaction in the game that is playing sound. And the environment is limited to one room. And the sound that is generated cannot be played again, so it only happens once. 
+    </p><br>
+
+    <p2>Technical Design: Wind Chimes</p2><br>
+    <br><img src="../img/chimes2.jpg" width="100%"><br>
+    <p>
+    There are 210 long cubes equally spaced with different piano notes individually assigned along with the script to generate sound on collision. 
+    <br>
+    Since the sound is an important element in the game, I wanted to implicate the importance of the sound by implementing the volume slider to adjust the volume of the sound.
+    <br>
+    I wanted to design the cube to make it look like glass.
+    </p><br>
+    <br><img src="../img/soundcube2.jpg" width="100%"><br>
+    <p2>Why wind and glass?</p2><br>
+    <p>
+        Wind and glass are the two mediums I chose to reflect and convey the idea of Ma. 
+        When wind meets glass, it generates voice to tell us about the emptiness and silence.
+    </p><br>
+    <p>
+        <p3>Silence -> Wind -> Audio</p3> <br>
+        I wanted to express silence with wind.<br>
+        Wind is invisible but hearable when it makes sound. Only when it makes sound, wind becomes noticeable and we feel the presence of the wind. When wind stops, there is silence, when wind moves again, the pause is defined.
+    </p><br>
+    <p>
+        <p3>Emptiness -> Glass -> Visual</p3><br>
+    I wanted to express emptiness with glass. <br>
+    It feels like glass is not there because it's clear. Glass is transparent that it reflects what is around it and projects it to its body so we can see what is around it. Glass looks blank and empty but it's there and helping us to see what is around it as well. Glass seems to me as the perfect object to show what is Ma, about perceiving the void to pay closer attention to what's around us.
+    </p>
+
+    <br><img src="../img/chimes.jpg" width="100%"><br>
+    <p2>Aesthetics, Colour Palette and Sound Design</p2>
+    <p>
+    The main colour of the game is light pink. The background image highlights the feeling of looking at glass or crystal like materials with vivid colours so the chimes can reflect their colours.
+    <br>
+    The game scene does not have any other sound except the sound applied to the chimes. I wanted to also bring the feeling of simpleness and calmness with many cubes lined so evenly and uniformly.
+    </p><br><br>
+    </div>
+
+<div class="contentBox" >
+    <h3>REFLECTION</h3><br>
+<p>
+    In technical terms, there is a lot to further develop and improve. I definitely would want to include the scene of showing the whole room in the distance to show the whole cube to see how they are positioned so uniformly. I would like to adjust the controller with looking up or looking down options to enhance the experience.  I think it would be nice to be able to see how the cubes shake when it's hit, but it seems like it does not show very obviously when I play the game. I would like to fix this as well. 
+<br>
+But I enjoy playing this game. I enjoyed listening to the music I create with these glass cubes, specially the pauses I create with the movement. 
+<br><br>
+There are so many things I would like to improve technically, I’m still learning to be more comfortable with Unity and Code works. This game has definitely helped me with how there is always a gap between what I would want to design and what I can actually do in a technical way, and I learned that I need to negotiate and balance between the two. I think that is a great lesson I’ve had from this game which will affect my design from now on. I’m grateful for that.
+</p><br><br>
+</div><br>
+
+<div class="bottomPage">
+    <ul><li><a href="#top"><img src="../img/arrow.png" width="40" height="40" ></a></li></ul>
+    <ul><li><a href="../index.html"><img src="../img/house.png" width="50" height="40" ></a></li></ul>
+    <ul><li><a href="contact.html"><img src="../img/contact2.png" width="45" height="43" ></a></li></ul>
+</div><br>
+ -->
+</body>
+
+</html>
+

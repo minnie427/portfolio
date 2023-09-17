@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+      <link rel="manifest" href="../favicon/site.webmanifest">
+      
+        <style>
+            body {
+                background-color: var(--col-02);
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(189, 59, 174));
+                background-image: cover;
+
+                
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <div id="header-section">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33" ></a></li>
+                    </ul>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" wwidth="35" height="33">
+                <audio id="bgm" src="../audio/main.mp3" autoplay loop ></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.1;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="../img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="../img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+            <h1> <img src="../img/contact.png" id="name" width = 400px height = 100% >  </h1>
+        </header>
+       
+<br>
+<div class="contentBox2">
+        <h5>
+            Hello,
+            <br>
+            Here's how you can reach me. 
+            <br></h5>
+          
+<br><br>
+             <p class="email">
+                minniepark.studio@gmail.com
+                <br>
+            
+                <br>
+            Instagram @minniepark.studio
+            <br>
+            LinkedIn @minniejiminpark
+        </p><br><br><br>
+        <h6>
+        Hope you have another fun day
+        <br>
+        :)
+    </h6>
+    </div><br>
+
+                <div class="bottomPage">
+                    <ul><li><a href="#top"><img src="../img/arrow.png" width="40" height="40" ></a></li></ul>
+                    <ul><li><a href="../index.html"><img src="../img/house.png" width="50" height="40" ></a></li></ul>
+<!--                     <ul><li><a href="contact.html"><img src="../img/contact2.png" width="45" height="43" ></a></li></ul>
+ -->                </div><br>
+
+</body>
+
+</html>
+
