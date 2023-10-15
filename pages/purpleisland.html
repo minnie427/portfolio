@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat&family=Pixelify+Sans:wght@400;500;600;700&family=Tilt+Neon&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+      <link rel="manifest" href="../favicon/site.webmanifest">
+
+
+        <style>
+            body {
+                background-color: rgb(30, 12, 47);
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(31, 7, 34));
+                background-image: cover;
+                
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <header>
+            <div id="header-section">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33" ></a></li>
+                    </ul>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="../audio/galaxy.mp3" autoplay loop></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.5;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="../img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="../img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+        </header>
+
+<br><br>
+       <!--  <div class="description">
+            <div class ="text-wrapper">
+                <h2>Use scroll or pan to zoom in and out to have a closer look </h2>
+                <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+                <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+                <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+            </div> <br> -->
+            <h1 class="h1_white">PURPLE ISLAND</h1>
+        
+        
+        
+        <!-- <h1 id="top"><img src="../img/pinkbird.png" id="name" width = 450px ></h1><br><br><br>
+         -->
+        
+        
+         <div class="sketchfab-embed-wrapper"> <iframe width="100%" height="100%" title="PURPLE ISLAND" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c3fff5afe57b4812b48537f3c936279d/embed?autostart=1&preload=1"> </iframe> </div>
+
+            <br><br>
+        
+        <div class="contentBox" >
+                <h3 class="h3_white">
+                    PROJECT DESCRIPTION
+                </h3>
+                <p class="p_white">
+                    “Purple Island” is a 3D model of a floating island located somewhere in the mystical universe. The island is adorned with stunning and ethereal plants and flowers, immersing visitors in a mesmerizing sea of various shades of purple. Several areas on the island provide perfect spots to appreciate MONTSENU’s latest clothing lines, while recycled plastic bottles float around, serving as a reminder for us to continually strive for a more sustainable approach in plastic usage. Delicate petals cascade from the island, creating a breathtaking and dreamlike spectacle.
+                   <br><br><br>
+                   Primary Software: MAYA
+                <br><br><br><br></p><br><br><br><br><br>
+
+
+<p2>Rendering from Maya</p2><br>
+    <br><img src="../img/purple3.jpg" width="100%"><br>
+    <br><img src="../img/purple1.jpg" width="100%"><br>
+    <br><img src="../img/purple5.jpg" width="100%"><br>
+    <br><img src="../img/purple4.jpg" width="100%"><br>
+
+
+                <br><br><br><br><br><br><br>
+    <h3 class="h3_white">
+        USE OF ADVANCED TECHNIQUE
+    </h3>
+    <p class="p_white"> 
+                <br>
+                By exploring and implementing these technical techniques in Maya, the project’s visual quality and level of realism can be
+                significantly elevated,
+                providing a more immersive and engaging experience for viewers.
+                <br><br><br><br>
+             </p>
+             <br><img src="../img/mash.png" width="100%"><br>
+        <br><p3>Grass, Plants, Flowers: Stand-ins + MASH</p3>
+                <p class="p_white"> 
+                To achieve a diverse range of plants on the island, stand-ins are utilized within a MASH instancing network. This approach enables thousands of selected assets to be distributed across the top plane mesh, which is modeled to resemble a terrain. Stand-ins play a crucial role in optimizing the performance of the instancing network, as they allow Maya to compute and render the scene efficiently. These stand-ins are created by converting the polygons into the ASS (Arnold Scene Source) format, which facilitates faster and lighter istancing calculations.                <br>
+                The feeling of desiring to understand your facial expressions.
+                <br><br>
+                </p><br><br><br>
+               
+                <br><img src="../img/branch.png" width="100%"><br>
+                <br><p3>Branches: Rigging </p3>
+                        <p class="p_white"> 
+                            A tree trunk with straight branches is modeled, and joints are added to each branch, acting as bones for the tree. Rigging is employed to create a hierarchical structure that is bound to each branch, enabling flexible control and manipulation. Utilizing rigging in trees is highly beneficial as it allows for the articulation of branches in a lifelike manner, achieving natural motion and dynamics. This technique enhances the realism of the tree’s movement and brings a sense of organic motion to the overall scene.                        <br><br>
+                        </p><br><br><br>
+
+                        <br><img src="../img/mash.png" width="100%"><br>
+                        <br><p3>Cloth: Ncloth, Wind effect</p3>
+                                <p class="p_white"> 
+                                    Maya’s Ncloth feature was utilized to simulate the natural behavior of cloth, specifically a cloth plane swaying in the wind. This powerful tool enables the creation of realistic cloth simulations by defining physical properties such as elasticity, friction, and gravity. Applying Ncloth to a cloth plane allows for the achievement of lifelike draping, folding, and movement, resulting in visually convincing cloth dynamics.                                <br><br>
+                                </p>
+
+
+                <br><br> <br><br>
+        
+                </p> 
+              
+        
+      
+     </div>
+        <div class="bottomPage">
+            <ul><li><a href="#top"><img src="../img/arrow.png" width="40" height="40" ></a></li></ul>
+            <ul><li><a href="../index.html"><img src="../img/house.png" width="50" height="40" ></a></li></ul>
+<!--                     <ul><li><a href="contact.html"><img src="../img/contact2.png" width="45" height="43" ></a></li></ul>
+-->                </div>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+<div class="footer__container container">
+        Copyright ©2023 Minnie Park Art. All rights reserved.
+</div>
+</footer>
+
+</body>
+
+</html>
+
+        
+        

@@ -19,10 +19,10 @@ const mouse = new THREE.Vector2();
 
 const models = [
   {
-    gltf: "./data/robin.glb",
-    link: "./pages/pinkbird.html",
-    position: [-2.1, 0.3, 0],
-    scale: 0.0021,
+    gltf: "./data/pinkmask.gltf",
+    link: "./pages/bodymorphosis.html",
+    position: [-1.7, -0.5, 0],
+    scale: 0.3,
     rotate: 0.75,
   },
  /*  {
@@ -33,9 +33,15 @@ const models = [
   }, */
   {
     gltf: "./data/rose1.glb",
-    link: "./pages/flashlight.html",
+    link: "./pages/voice.html",
     position: [0, -0.4, -2.3],
     scale: 25,
+  },
+  {
+    gltf: "./data/microphone.glb",
+    link: "./pages/voice.html",
+    position: [0, 0, -2.3],
+    scale: 5,
   },
   {
     gltf: "./data/cookie.glb",
@@ -44,14 +50,14 @@ const models = [
     scale: 0.01,
   },
   {
-    gltf: "./data/cube.glb",
+    gltf: "./data/record.glb",
     link: "./pages/sound.html",
-    position: [-2, 0.4, -2],
-    scale: 0.008,
+    position: [-2, 0.2, -2.4],
+    scale: 4,
   },
   {
     gltf: "./data/galaxy3.glb" ,
-    link: "./pages/galaxy.html",
+    link: "./pages/purpleisland.html",
     position: [2.1, 0.3, 0],
     scale: 0.5,
   },
@@ -92,7 +98,7 @@ scene.add(modelContainer);
 
 const fov = 10;
 const aspect = container.clientWidth / container.clientHeight;
-const near = 0.1;
+const near = 0.2;
 const far = 900;
 
 // camera setup
@@ -102,18 +108,41 @@ camera.lookAt(new THREE.Vector3(0, 0, 0));
 const ambient = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambient);
 
-
-const light = new THREE.DirectionalLight(0xffffff, 0.4);
-light.position.set(10,10,10);
+// light
+const light = new THREE.DirectionalLight(0xffffff, 0.5);
+light.position.set(0,1,0);
 scene.add(light);
 
+/* const dl = new THREE.DirectionalLight(0xffffff, 0.5);
+dl.position.set(-2, 2, 0);
+const dlHelper = new THREE.DirectionalLight(dl, 3);
+scene.add(dl, dlHelper); */
+
+const sl = new THREE.SpotLight(0xffc0fc0, 500, 10, 0.2, 0.5);
+sl.position.set(5,3,0);
+/* const slHelper = new THREE.SpotLightHelper(sl); */
+scene.add(sl);
 
 //renderer
+
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+/* renderer.setClearColor(0x000000); */
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild(renderer.domElement);
+
 controls = new OrbitControls (camera, renderer.domElement);
+controls.enableDamping = true; 
+/* controls.minDistance = 5;
+controls.maxDistance = 20;
+controls.minPolarAngle = 0.5;
+controls.maxPolarAngle = 1.5; */
+/* controls.autoRotate = false; */
+/* controls.target = new THREE.vector3(0, 1, 0);
+ */controls.update();
+
+
 renderer.outputEncoding = THREE.sRGBEncoding;
 
 //load model
@@ -166,13 +195,64 @@ function animate(){
 }
 
 function onMouseClick() {
+
+  
   raycaster.setFromCamera( mouse, camera );
 	const intersects = raycaster.intersectObjects(modelContainer.children);
   if (intersects.length > 0) {
     const { link } = intersects[0].object.userData;
     location.replace (link, '_blank');
   }
+var clientClickX, clientClickY;
+
+  renderer.domElement.addEventListener('pointerdown', function(ev){
+      clientClickX = ev.clientX;
+      clientClickY = ev.clientY;
+  }, false);
+
+  renderer.domElement.addEventListener('pointerup', function (ev){
+      if (ev.target == renderer.domElement) {
+          var x = ev.clientX;
+          var y = ev.clientY;
+          // If the mouse moved since the mousedown then don't consider this a selection
+          if( x != clientClickX || y != clientClickY )
+              return;
+
+          var v = new THREE.Vector3((x/window.innerWidth)*2-1, -(y/window.innerHeight)*2+1, 0.5);
+          projector.unprojectVector(v, camera);
+          var ray = new THREE.Ray(camera.position, 
+                          v.subSelf(camera.position).normalize());
+          var intersects = ray.intersectObjects(SOLARSIM.OrbitalObjectsMeshes());
+          if (intersects.length > 0) {
+              SOLARSIM.GUI.ShowObjectInfo( intersects[0].object.name );
+          } else {
+              // Nothing Clicked so set the currently selected object to nothing
+              SOLARSIM.CurrentlySelectedPlanet = null;
+              SOLARSIM.GUI.HideObjectInfo();
+          }
+      }
+  }, false);
+
 }
+
+/* const clickCoords = new THREE.Vector2();
+
+controls.addEventListener('start', (e) => {
+        clickCoords.x = e.target.target.x;
+	clickCoords.y = e.target.target.y;
+});
+
+controls.addEventListener('end', (e) => {
+	if (clickCoords.x == e.target.target.x && clickCoords.y == e.target.target.y) return onClickHandler(e);
+});
+
+const onClickHandler = (event) => {
+        //Do someting
+} */
+
+
+
+
 
 function onWindowResize () {
   camera.aspect = container.clientWidth / container.clientHeight;
