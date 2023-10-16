@@ -46,7 +46,7 @@ html{
   .scene {
     width: 100vw;
     height: 100vh;
-    background-color: var(--col-05);
+    background-color: #ffdaf2;
     position: absolute;
     top: 0;
     left: 0;
