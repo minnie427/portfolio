@@ -62,15 +62,74 @@
             </h1>-->
         </header>
 
-        <div class="image-container"><img id="1" src="./img/hearts1.png" width="150" 
+        <div class="image-container"><img id="heartPlay" src="./img/hearts1.png" width="150" 
             onmouseover="this.src='img/heart!.png';" width="150"
             onmouseout="this.src='img/hearts1.png';"width="150"/></div>
+            <audio id="heart" src="./audio/heart.mp3"  ></audio>
+            <script>
+                window.onload = function(){
+                    document.getElementById("heart").play();
+                }
+                var heart = document.getElementById("heart");
+                heart.volume = 0.1;
+                var heartPlay = document.getElementById("heartPlay");
+                heartPlay.onclick = function(){
+                   
+                        heart.play();
+                       
+                }
+            </script>
              <!-- <img src="./img/hearts1.png" id="name" width = 250px > -->
+     <!--        
+             <div class="instruction-container">
+                <img src="./img/cursor2.png"  width = "100px" >  -->
+
+                </div>
+
+                <div class="description">
+                    <div class ="text-wrapper2">
+                        <h2>Use scroll or pan to zoom in and out to have a closer look </h2>
+                        <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+                        <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+                        <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
+                    </div>
+<!-- 
+                    <svg class="cursorsvg" xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+    <title>Circular Text Path</title>
+  
+    <defs>
+        <path id="textcircle"
+              d="M250,400
+                 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+              transform="rotate(12,250,250)"/>
+    </defs>
+    <rect width="100%" height="100%" fill="none" />
+    <text>
+        <textPath xlink:href="#textcircle"
+                  aria-label="All for One &amp; One for All"
+                  textLength="942">ZOOM AND PAN TO VIEW MODELS &#160;</textPath>
+    </text>
+</svg>
+
+<script>
+const circleSvg = document.querySelector('svg')
+
+window.addEventListener('mousemove', (event) => {
+    circleSvg.style.top = event.clientY - 45;;
+    circleSvg.style.left = event.clientX - 45;
+})
+
+</script> -->
         
-        <div class="scene"></div>
+
+<div class="scene"></div>
+        
+        
 
 
-        
+ 
+
 </body>
 
 </html>

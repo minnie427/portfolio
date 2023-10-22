@@ -26,8 +26,10 @@ body {
     font-family: 'Poppins', sans-serif; 
     width: 100vw;
     height: 100vh;
-    
+ /*    cursor: none; */
   }
+
+ 
   
 html{
   scroll-behavior: smooth;
@@ -44,12 +46,14 @@ html{
   }
 
   .scene {
+    
     width: 100vw;
     height: 100vh;
-    background-color: #ffdaf2;
+    background-color: #f2c6e3;;
     position: absolute;
     top: 0;
     left: 0;
+
   
   }
 
@@ -91,6 +95,18 @@ html{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+}
+
+
+.instruction-container {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  top: 95%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  height: 200px;
 
 }
 
@@ -154,6 +170,21 @@ iframe {
 
 
 }
+
+.text-wrapper2 {
+
+  display: flex;
+  justify-content: flex-start;
+  /* background: var(--col-black); */
+  overflow: hidden;
+/*   margin-top: 20%; */
+  position: absolute;
+  padding: 1%;
+z-index: 1000;
+top: 95%;
+
+}
+
 
 /* Marque effect text settings */
 h2 {
@@ -502,10 +533,14 @@ to{border-right-color: transparent;}
   font-weight: 700;
   text-align: center;
   margin: auto;
-  color: var(--col-01);
+  color: var(--col-white);
   overflow: hidden;
 }
 
+.email a{
+  color:var(--col-03);
+  font-size: 3rem;
+}
 .sketchfab-embed-wrapper{
   width: 60vw;
   height: 40vh;
@@ -515,14 +550,29 @@ to{border-right-color: transparent;}
   margin-top: 50px;
 }
 
-#ep {
 
- width: 100%;
-  border-radius: 6px;
-  margin: 0;
-  padding: 0;
-  border: none;
+/* .cursorsvg {
+  z-index: 1000;
+position: absolute;
+overflow: hidden;
+place-items: center;
+font-family:var(--font-pixel);
+font-size: 4em;
 
-
+display: grid;
 }
 
+svg {
+  width: 100px;
+  position: absolute;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
