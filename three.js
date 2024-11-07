@@ -58,7 +58,7 @@ const models = [
   },
   {
     gltf: "./data/cupcake4.glb",
-    link: "./cupcake",
+    link: "./pages/cupcake.html",
     position: [0, -0.4, 2],
     scale: 2.1,
   },
