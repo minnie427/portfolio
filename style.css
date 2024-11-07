@@ -2,11 +2,13 @@
     outline: none;
     margin: 0;
     padding: 0;
+
+    
 }
 
 :root{
     --col-01: #292929;
-    --col-02: #ff3bbb;
+    --col-02: #ee64be;
     --col-03: #27ff6f;
     --col-04: #787878;
     --col-05: rgb(239, 239, 239);
@@ -24,9 +26,10 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif; 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
- /*    cursor: none; */
+    overflow-x: hidden;
+    /* cursor: none;  */
   }
 
  
@@ -37,7 +40,7 @@ html{
 
   .scene1 {
     width: 100vw;
-    height: 60vh;
+    height: 0vh;
     background-color: var(--col-05);
     position: static;
  /*    margin-top: 100px; */
@@ -49,7 +52,7 @@ html{
     
     width: 100vw;
     height: 100vh;
-    background-color: #f2c6e3;;
+    background-color: #e990cb;;
     position: absolute;
     top: 0;
     left: 0;
@@ -162,29 +165,23 @@ iframe {
 .text-wrapper {
   display: flex;
   justify-content: flex-start;
-  /* background: var(--col-black); */
   overflow: hidden;
-/*   margin-top: 20%; */
   position: relative;
   padding: 1%;
-
-
+  width: 100%;
 }
 
 .text-wrapper2 {
-
   display: flex;
   justify-content: flex-start;
-  /* background: var(--col-black); */
   overflow: hidden;
-/*   margin-top: 20%; */
   position: absolute;
   padding: 1%;
-z-index: 1000;
-top: 95%;
-
+  z-index: 1000;
+  top: 95%;
+  width: 100%;
+  
 }
-
 
 /* Marque effect text settings */
 h2 {
@@ -253,7 +250,8 @@ a{
  */  opacity: 1;
   /* padding-left: 15%;
   padding-right: 15%; */
-  width: 60vw;
+  max-width: 100%;
+  width: min(65ch, 90%);
   padding: 10%;
   align-items: center;
   justify-content: center;
@@ -265,6 +263,8 @@ a{
   overflow: auto;/* 
   box-shadow: 10px 10px 20px #000000; */
   border-style: none;
+  text-align: justify;
+  
 }
 
 

@@ -1,66 +1,60 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    
     <head>
-
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat&family=Pixelify+Sans:wght@400;500;600;700&family=Tilt+Neon&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="module" src="three.js" defer></script>
-
-    
+       
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+        
 
         <title>MINNIE PARK</title>
 
-     <!-- Favicon -->
-     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-     <link rel="manifest" href="./favicon/site.webmanifest">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
 
-
-
+        <style>
+            body {
+                background-color: var(--col-05);
+                background-image: cover;
+            }
+        </style>
     </head>
 
     <body>
         <header>
             <div id="header-section">
-             <!--    <nav>
+                <nav>
                     <ul>
-                        <li><a href="index.html"><img src="../img/_house.png" width="55" height="45" ></a></li>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33"></a></li>
                     </ul>
-                </nav> -->
-                <img src="./img/musicnote.png" id="musicPlay" width="35" height="33">
-                <audio id="bgm" src="./audio/main.mp3" autoplay loop ></audio>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="../audio/main.mp3" autoplay loop></audio>
                 <script>
-                    window.onload = function(){
-                        document.getElementById("bgm").play();
-                    }
                     var bgm = document.getElementById("bgm");
                     bgm.volume = 0.1;
                     var musicPlay = document.getElementById("musicPlay");
                     musicPlay.onclick = function(){
                         if(bgm.paused){
                             bgm.play();
-                            musicPlay.src="./img/musicnote.png";
+                            musicPlay.src="../img/musicnote.png";
                         } else {
                             bgm.pause();
-                            musicPlay.src="./img/pause.png";
+                            musicPlay.src="../img/pause.png";
                         }
                     }
                 </script>
             </div>
-         <!--   <h1>
-                <div class="image-container"><img id="1" src="./img/hearts1.png" width="250" 
-                    onmouseover="this.src='img/hearts2.png';" width="250"
-                    onmouseout="this.src='img/hearts1.png';"width="250"/></div>
-                      <img src="./img/hearts1.png" id="name" width = 250px > 
-            </h1>-->
+            <!-- <h1><img src="../img/minnie7.png" id="name" width="400px"></h1> -->
         </header>
+       
+     
 
         <div class="image-container"><img id="heartPlay" src="./img/hearts1.png" width="150" 
             onmouseover="this.src='img/heart!.png';" width="150"
@@ -88,7 +82,7 @@
 
                 <div class="description">
                     <div class ="text-wrapper2">
-                        <h2>Use scroll or pan to zoom in and out to have a closer look </h2>
+                        <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
                         <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
                         <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
                         <h2>USE SCROLL OR PAN TO ZOOM IN AND OUT TO HAVE A CLOSER LOOK </h2>
@@ -127,7 +121,11 @@ window.addEventListener('mousemove', (event) => {
         
         
 
-
+<footer class="footer">
+    <div class="footer__container container">
+        Copyright ©2023 Minnie Park Art. All rights reserved.
+    </div>
+</footer>
  
 
 </body>
