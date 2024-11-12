@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat&family=Pixelify+Sans:wght@400;500;600;700&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="module" src="../three.js" defer></script>
+
+    
+
+        <title>MINNIE PARK</title>
+
+         <!-- Favicon -->
+         <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+         <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+         <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+         <link rel="manifest" href="../favicon/site.webmanifest">
+
+        <style>
+            body {
+                background-color: rgb(31, 33, 34);
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(70, 48, 65, 0.794));
+                background-image: cover;
+                
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div id="header-section">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"><img src="../img/house.png" width="40" height="33" ></a></li>
+                    </ul>
+                </nav>
+                <img src="../img/musicnote.png" id="musicPlay" width="35" height="33">
+                <audio id="bgm" src="../audio/flashlight.mp3" autoplay loop ></audio>
+                <script>
+                    var bgm = document.getElementById("bgm");
+                    bgm.volume = 0.2;
+                    var musicPlay = document.getElementById("musicPlay");
+                    musicPlay.onclick = function(){
+                        if(bgm.paused){
+                            bgm.play();
+                            musicPlay.src="../img/musicnote.png";
+                        } else {
+                            bgm.pause();
+                            musicPlay.src="../img/pause.png";
+                        }
+                    }
+                </script>
+            </div>
+        </header>
+
+<br><br>
+        <h1>THE META ROSE PROJECT <br>2024</h1>
+
+        <br><br><br>
+    <div class ="text-wrapper">
+        <h2>WELCOME TO THE META ROSE</h2>
+        <h2>WELCOME TO THE META ROSE</h2>
+        <h2>WELCOME TO THE META ROSE</h2>
+        <h2>WELCOME TO THE META ROSE</h2>
+    </div> <br>
+
+
+    <!-- <ul><li><a href="https://newart.city/show/metaroseproject" target="_blank"><h4>CLICK ME</h4></a></li></ul> -->
+    <br><br><br>
+    <div class="metarose-link">
+    <a href="https://newart.city/show/metaroseproject" target="_blank" rel="noopener noreferrer">
+        <img src="../img/metarose.png" alt="The Meta Rose Project" width="100%" >
+    </a></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+<!--     
+        <div class="outer">
+            <div class="youtube-wrapper">
+                <iframe src="https://www.youtube.com/embed/pDPXh2zAd-Q?si=mdSwzOTYOywM-i3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </div>
+
+        <ul><li><a href="https://www.youtube.com/watch?v=pDPXh2zAd-Q" target="_blank"><h4>WATCH IN YOUTUBE</h4></a></li></ul>
+
+        <br><br>
+
+        
+
+
+<div class="contentBox" >
+
+    <h3>WHAT IS IT?</h3>
+    <p >
+        An immersive stage experience using a microphone as an input and colours as main focus   
+    <br><br><br>Primary Software: TouchDesigner
+    </p><br><br><br><br>
+    <h3>DESIGN APPROACH</h3>
+    <p>
+        The purpose of this project is to enhance the experience of the joy of
+        singing, creating a fun and engaging experience, and to encourage
+        users to enjoy and embrace their own voices. Users can enjoy the
+        music and the colors that are generated according to their own
+        voice, creating an immersive digital experience of sound and colors.    </p><br>
+    <p>
+        This project provides an immersive stage experience where
+        colors on the screen react to sound (using voice input through
+        microphones) and the body movement (using hand tracking) to
+        change the colors on the screen and the sound output accordingly.    </p><br>
+    <p>
+        While the song is being played, the colors according to the musical
+        notes will accumulate and blend with each other on the screen. At
+        the end of the song, users will be able to see the result of all the
+        colors generated by their voice, resulting in the color of their voice.    </p><br></div>
+
+   -->
+
+<div class="bottomPage">
+            <ul><li><a href="#top"><img src="../img/arrow.png" width="40" height="40" ></a></li></ul>
+            <ul><li><a href="../index.html"><img src="../img/house.png" width="50" height="40" ></a></li></ul>
+                 <ul><li><a href="contact.html"><img src="../img/contact2.png" width="45" height="43" ></a></li></ul>
+              </div>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="footer__container container">
+            Copyright ©2024 Minnie Park Art. All rights reserved.
+    </div>
+    </footer>
+</body>
+
+</html>
+
+

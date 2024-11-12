@@ -28,16 +28,16 @@ const models = [
   },
   {
     gltf: "./data/rose1.glb",
-    link: "./pages/voice.html",
+    link: "./pages/rose.html",
     position: [0, -0.4, -2.3],
     scale: 25,
   },
-  {
-    gltf: "./data/microphone.glb",
-    link: "./pages/voice.html",
-    position: [0, 0, -2.3],
-    scale: 5,
-  },
+  // {
+  //   gltf: "./data/microphone.gl",
+  //   link: "./pages/voice.html",
+  //   position: [-2, 0, -2.3],
+  //   scale: 5,
+  // },
   {
     gltf: "./data/cookie.glb",
     link: "./pages/cookie.html",
